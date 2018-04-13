@@ -1,55 +1,56 @@
 {
-	"name": "react-vmarkdown",
-	"version": "0.0.2",
-	"description": "Markdown editor built using ReactJS.",
-	"main": "dist/Main.js",
-	"typings": "dist/Main.d.ts",
-	"scripts": {
-		"dev": "webpack --config webpack.config.js --inline --colors --progress --watch",
-		"dist": "babel src/index.jsx -u -o dist/index.js --stage 1 --presets react"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/Venryx/react-vmarkdown.git"
-	},
-	"keywords": [
-		"react"
-	],
-	"author": {
-		"name": "Venryx",
-		"email": "venryx@gmail.com",
-		"url": "http://venryx.com"
-	},
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/Venryx/react-vmarkdown/issues"
-	},
-	"homepage": "https://github.com/Venryx/react-vmarkdown",
-	"peerDependencies": {
-		"react": "^15.3.0",
-		"react-dom": "^15.3.0",
-		"react-vextensions": "^0.0.2",
-		"react-vcomponents": "^0.0.2"
-	},
-	"devDependencies": {
-		"@types/react": "15.6.10",
-		"babel-cli": "^6.4.5",
-		"babel-core": "^6.4.5",
-		"babel-loader": "^6.2.1",
-		"babel-preset-es2015": "^6.3.13",
-		"babel-preset-react": "^6.3.13",
-		"react": "^15.3.0",
-		"react-dom": "^15.3.0",
-		"react-vextensions": "^0.0.2",
-		"react-vcomponents": "^0.0.2",
-		"style-loader": "^0.13.0",
-		"ts-loader": "^2.0.1",
-		"typescript": "^2.2.1",
-		"webpack": "^1.12.12",
-		"webpack-dev-server": "^1.14.1"
-	},
-	"dependencies": {
-		"classnames": "^2.2.5",
-		"codemirror": "^5.36.0"
-	}
+  "name": "react-vmarkdown",
+  "version": "0.0.2",
+  "description": "Markdown editor built using ReactJS.",
+  "main": "dist/Main.js",
+  "typings": "dist/Main.d.ts",
+  "scripts": {
+    "dev": "webpack --config webpack.config.js --inline --colors --progress --watch",
+    "dist": "babel src/index.jsx -u -o dist/index.js --stage 1 --presets react"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Venryx/react-vmarkdown.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": {
+    "name": "Venryx",
+    "email": "venryx@gmail.com",
+    "url": "http://venryx.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Venryx/react-vmarkdown/issues"
+  },
+  "homepage": "https://github.com/Venryx/react-vmarkdown",
+  "peerDependencies": {
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0",
+    "react-vextensions": "^0.0.2",
+    "react-vcomponents": "^0.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "15.6.10",
+    "babel-cli": "^6.4.5",
+    "babel-core": "^6.4.5",
+    "babel-loader": "^6.2.1",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "hard-source-webpack-plugin": "^0.6.4",
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0",
+    "react-vcomponents": "^0.0.2",
+    "react-vextensions": "^0.0.2",
+    "style-loader": "^0.13.0",
+    "ts-loader": "^2.0.1",
+    "typescript": "^2.2.1",
+    "webpack": "^1.12.12",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "codemirror": "^5.36.0"
+  }
 }

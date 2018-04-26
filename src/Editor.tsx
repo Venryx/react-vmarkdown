@@ -5,6 +5,7 @@ import {GetCursorState, ApplyFormat} from "./Formatter";
 import "codemirror/mode/xml/xml";
 import "codemirror/mode/markdown/markdown";
 import "codemirror/addon/edit/continuelist";
+import "codemirror/addon/scroll/simplescrollbars";
 import {MarkdownToolbar} from "./Toolbar";
 import {BaseComponent} from "react-vextensions";
 import React from "react";

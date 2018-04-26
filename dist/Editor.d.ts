@@ -1,6 +1,7 @@
 import "codemirror/mode/xml/xml";
 import "codemirror/mode/markdown/markdown";
 import "codemirror/addon/edit/continuelist";
+import "codemirror/addon/scroll/simplescrollbars";
 import { BaseComponent } from "react-vextensions";
 export declare class MarkdownEditor extends BaseComponent<{
     value: string;

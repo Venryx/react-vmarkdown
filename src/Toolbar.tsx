@@ -2,7 +2,7 @@ import React from "react";
 import {BaseComponent} from "react-vextensions";
 import Icons from "./Icons";
 import {ApplyFormat} from "./Formatter";
-import {Button} from "react-vcomponents";
+import {Button, Row} from "react-vcomponents";
 
 export class MarkdownToolbar extends BaseComponent<{enabled?: boolean, editor: ()=>any, excludeCommands?: string[]}, {}> {
 	render() {
@@ -22,12 +22,12 @@ export class MarkdownToolbar extends BaseComponent<{enabled?: boolean, editor: (
 			{name: "link", label: "a"},
 		];
 		return (
-			<div style={{marginTop: 3, marginBottom: 3}}>
+			<Row style={{marginTop: 3, marginBottom: 3}}>
 				{commands.filter(a=>excludeCommands.indexOf(a.name) != -1).map((command, index)=> {
 					return <ToolBarButton key={index} enabled={enabled} editor={editor} command={command.name} label={command.label} first={index == 0}/>;
 				})}
 				{children}
-			</div>
+			</Row>
 		);	
 	}
 }
@@ -39,8 +39,6 @@ class ToolBarButton extends BaseComponent<{editor: ()=>any, command: string, lab
 		let icon = Icons[command];
 		return (
 			<Button {...rest as any} width={24} height={24} ml={first ? 0 : 5}
-					//pt={icon ? 0 : 1}
-					style={{paddingTop: icon ? 0 : 1}}
 					onClick={()=> {
 						ApplyFormat(editor().codeMirror, command);
 					}}>

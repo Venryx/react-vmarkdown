@@ -254,8 +254,10 @@ var MarkdownEditor = exports.MarkdownEditor = function (_BaseComponent) {
         value: function render() {
             var _this2 = this;
 
+            var toolbar = this.props.toolbar;
+
             var editorClassName = (0, _classnames2.default)("MDEditor_editor", { "MDEditor_editor--focused": this.state.isFocused });
-            return _react2.default.createElement("div", { className: "MDEditor" }, _react2.default.createElement(_Toolbar.MarkdownToolbar, { editor: function editor() {
+            return _react2.default.createElement("div", { className: "MDEditor" }, toolbar && _react2.default.createElement(_Toolbar.MarkdownToolbar, { editor: function editor() {
                     return _this2;
                 } }), _react2.default.createElement("div", { className: editorClassName }, _react2.default.createElement("textarea", { ref: "codemirror", defaultValue: this.props.value, autoComplete: "off" })));
         }
@@ -263,6 +265,8 @@ var MarkdownEditor = exports.MarkdownEditor = function (_BaseComponent) {
 
     return MarkdownEditor;
 }(_reactVextensions.BaseComponent);
+
+MarkdownEditor.defaultProps = { toolbar: true };
 
 /***/ }),
 /* 3 */
@@ -11967,7 +11971,7 @@ var MarkdownToolbar = exports.MarkdownToolbar = function (_BaseComponent) {
             excludeCommands = excludeCommands || [];
             var commands = [{ name: "h1", label: "H1" }, { name: "h2", label: "H2" }, { name: "h3", label: "H3" }, { name: "h4", label: "H4" }, { name: "bold", label: "b" }, { name: "italic", label: "i" }, { name: "oList", label: "ol" }, { name: "uList", label: "ul" }, { name: "quote", label: "q" }, { name: "link", label: "a" }];
             return _react2.default.createElement(_reactVcomponents.Row, { style: { marginTop: 3, marginBottom: 3 } }, commands.filter(function (a) {
-                return excludeCommands.indexOf(a.name) != -1;
+                return excludeCommands.indexOf(a.name) == -1;
             }).map(function (command, index) {
                 return _react2.default.createElement(ToolBarButton, { key: index, enabled: enabled, editor: editor, command: command.name, label: command.label, first: index == 0 });
             }), children);

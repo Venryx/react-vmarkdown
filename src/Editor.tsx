@@ -11,7 +11,9 @@ import {BaseComponent} from "react-vextensions";
 import React from "react";
 import ReactDOM from "react-dom";
 
-export class MarkdownEditor extends BaseComponent<{value: string, onChange?: Function, options: any}, {cursorState: any, isFocused: boolean}> {
+export class MarkdownEditor extends BaseComponent<{value: string, onChange?: Function, options: any, toolbar?: boolean}, {cursorState: any, isFocused: boolean}> {
+	static defaultProps = {toolbar: true};
+	
 	codeMirror;
 	_currentCodemirrorValue;
 	
@@ -74,10 +76,11 @@ export class MarkdownEditor extends BaseComponent<{value: string, onChange?: Fun
 	}
 
 	render() {
-		var editorClassName = classNames("MDEditor_editor", { "MDEditor_editor--focused": this.state.isFocused });
+		let {toolbar} = this.props;
+		var editorClassName = classNames("MDEditor_editor", {"MDEditor_editor--focused": this.state.isFocused});
 		return (
 			<div className="MDEditor">
-				<MarkdownToolbar editor={()=>this}/>
+				{toolbar && <MarkdownToolbar editor={()=>this}/>}
 				<div className={editorClassName}>
 					<textarea ref="codemirror" defaultValue={this.props.value} autoComplete="off" />
 				</div>

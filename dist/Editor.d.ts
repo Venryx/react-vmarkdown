@@ -7,10 +7,14 @@ export declare class MarkdownEditor extends BaseComponent<{
     value: string;
     onChange?: Function;
     options: any;
+    toolbar?: boolean;
 }, {
     cursorState: any;
     isFocused: boolean;
 }> {
+    static defaultProps: {
+        toolbar: boolean;
+    };
     codeMirror: any;
     _currentCodemirrorValue: any;
     getInitialState(): {

@@ -23,12 +23,12 @@ export class MarkdownToolbar extends BaseComponent<{enabled?: boolean, editor: (
 		];
 		return (
 			<Row style={{marginTop: 3, marginBottom: 3}}>
-				{commands.filter(a=>excludeCommands.indexOf(a.name) != -1).map((command, index)=> {
+				{commands.filter(a=>excludeCommands.indexOf(a.name) == -1).map((command, index)=> {
 					return <ToolBarButton key={index} enabled={enabled} editor={editor} command={command.name} label={command.label} first={index == 0}/>;
 				})}
 				{children}
 			</Row>
-		);	
+		);
 	}
 }
 

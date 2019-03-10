@@ -2,11 +2,11 @@
   "name": "react-vmarkdown",
   "version": "0.0.3",
   "description": "Markdown editor built using ReactJS.",
-  "main": "dist/Main.js",
-  "typings": "dist/Main.d.ts",
+  "main": "Dist/Main.js",
+  "typings": "Dist/Main.d.ts",
   "scripts": {
     "dev": "webpack --config webpack.config.js --colors --progress --watch",
-    "dist": "babel src/index.jsx -u -o dist/index.js --stage 1 --presets react"
+    "dist": "babel Source/index.jsx -u -o Dist/index.js --stage 1 --presets react"
   },
   "repository": {
     "type": "git",
@@ -32,12 +32,12 @@
     "react-vcomponents": "^0.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
     "@types/react": "15.6.10",
     "babel-cli": "^6.4.5",
-    "babel-core": "^6.4.5",
-    "babel-loader": "^7.1.4",
-    "babel-preset-es2015": "^6.3.13",
-    "babel-preset-react": "^6.3.13",
+    "babel-loader": "^8.0.4",
     "hard-source-webpack-plugin": "^0.6.4",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",

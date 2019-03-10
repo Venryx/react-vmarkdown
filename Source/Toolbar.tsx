@@ -38,7 +38,7 @@ class ToolBarButton extends BaseComponent<{editor: ()=>any, command: string, lab
 		let {editor, command, label, first, ...rest} = this.props;
 		let icon = Icons[command];
 		return (
-			<Button {...rest as any} width={24} height={24} ml={first ? 0 : 5}
+			<Button {...rest as any} width={24} height={24} ml={first ? 0 : 5} style={{whiteSpace: "pre"}}
 					onClick={()=> {
 						ApplyFormat(editor().codeMirror, command);
 					}}>

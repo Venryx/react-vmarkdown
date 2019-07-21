@@ -177,8 +177,8 @@ function (_BaseComponent) {
       };
     }
   }, {
-    key: "componentDidMount",
-    value: function componentDidMount() {
+    key: "ComponentDidMount",
+    value: function ComponentDidMount() {
       this.codeMirror = codemirror__WEBPACK_IMPORTED_MODULE_1___default.a.fromTextArea(react_dom__WEBPACK_IMPORTED_MODULE_10___default.a.findDOMNode(this.refs.codemirror), this.getOptions());
       this.codeMirror.on("change", this.codemirrorValueChanged);
       this.codeMirror.on("focus", this.focusChanged.bind(this, true));
@@ -197,16 +197,16 @@ function (_BaseComponent) {
       }, this.props.options);
     }
   }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
+    key: "ComponentWillUnmount",
+    value: function ComponentWillUnmount() {
       // todo: is there a lighter-weight way to remove the cm instance?
       if (this.codeMirror) {
         this.codeMirror.toTextArea();
       }
     }
   }, {
-    key: "componentWillReceiveProps",
-    value: function componentWillReceiveProps(nextProps) {
+    key: "ComponentWillReceiveProps",
+    value: function ComponentWillReceiveProps(nextProps) {
       if (this.codeMirror && this._currentCodemirrorValue !== nextProps.value) {
         this.codeMirror.setValue(nextProps.value);
       }

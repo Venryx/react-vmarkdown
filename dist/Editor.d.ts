@@ -21,10 +21,10 @@ export declare class MarkdownEditor extends BaseComponent<{
         isFocused: boolean;
         cursorState: {};
     };
-    componentDidMount(): void;
+    ComponentDidMount(): void;
     getOptions(): any;
-    componentWillUnmount(): void;
-    componentWillReceiveProps(nextProps: any): void;
+    ComponentWillUnmount(): void;
+    ComponentWillReceiveProps(nextProps: any): void;
     focus(): void;
     focusChanged(focused: any): void;
     updateCursorState(): void;

@@ -24,7 +24,7 @@ export class MarkdownEditor extends BaseComponent<{value: string, onChange?: Fun
 		};
 	}
 
-	componentDidMount() {
+	ComponentDidMount() {
 		this.codeMirror = CM.fromTextArea(ReactDOM.findDOMNode(this.refs.codemirror), this.getOptions());
 		this.codeMirror.on("change", this.codemirrorValueChanged);
 		this.codeMirror.on("focus", this.focusChanged.bind(this, true));
@@ -42,14 +42,14 @@ export class MarkdownEditor extends BaseComponent<{value: string, onChange?: Fun
 		}, this.props.options);
 	}
 
-	componentWillUnmount() {
+	ComponentWillUnmount() {
 		// todo: is there a lighter-weight way to remove the cm instance?
 		if (this.codeMirror) {
 			this.codeMirror.toTextArea();
 		}
 	}
 
-	componentWillReceiveProps(nextProps) {
+	ComponentWillReceiveProps(nextProps) {
 		if (this.codeMirror && this._currentCodemirrorValue !== nextProps.value) {
 			this.codeMirror.setValue(nextProps.value);
 		}

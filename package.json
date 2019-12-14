@@ -1,30 +1,28 @@
 {
   "name": "react-vmarkdown",
-  "version": "0.0.3",
   "description": "Markdown editor built using ReactJS.",
+  "version": "0.0.3",
   "main": "Dist/Main.js",
+  "type": "module",
   "typings": "Dist/Main.d.ts",
-  "scripts": {
-    "dev": "webpack --config webpack.config.js --colors --progress --watch",
-    "dist": "babel Source/index.jsx -u -o Dist/index.js --stage 1 --presets react"
+  "license": "MIT",
+  "author": {
+    "name": "Venryx",
+    "email": "venryx@gmail.com",
+    "url": "https://venryx.com"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Venryx/react-vmarkdown.git"
   },
   "keywords": [
-    "react"
+    "react",
+    "markdown"
   ],
-  "author": {
-    "name": "Venryx",
-    "email": "venryx@gmail.com",
-    "url": "http://venryx.com"
+  "scripts": {
+    "dev": "tsc --watch",
+    "dist": "tsc"
   },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Venryx/react-vmarkdown/issues"
-  },
-  "homepage": "https://github.com/Venryx/react-vmarkdown",
   "peerDependencies": {
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
@@ -32,26 +30,16 @@
     "react-vcomponents": "^0.0.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
-    "@babel/preset-react": "^7.0.0",
-    "@types/react": "15.6.10",
-    "babel-cli": "^6.4.5",
-    "babel-loader": "^8.0.4",
-    "hard-source-webpack-plugin": "^0.6.4",
-    "react": "^15.3.0",
-    "react-dom": "^15.3.0",
-    "react-vcomponents": "^0.0.2",
-    "react-vextensions": "^0.0.2",
-    "style-loader": "^0.13.0",
-    "ts-loader": "^4.2.0",
-    "typescript": "^2.2.1",
-    "webpack": "^4.5.0",
-    "webpack-cli": "^2.0.14",
-    "webpack-dev-server": "^3.9.0"
+    "@types/react": "^16.9.16",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-vcomponents": "^1.0.4",
+    "react-vextensions": "^1.0.2",
+    "style-loader": "^1.0.1",
+    "typescript": "^3.7.3"
   },
   "dependencies": {
-    "classnames": "^2.2.5",
+    "classnames": "^2.2.6",
     "codemirror": "^5.36.0"
   }
 }

@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import "codemirror/mode/xml/xml";
 import "codemirror/mode/markdown/markdown";
 import "codemirror/addon/edit/continuelist";

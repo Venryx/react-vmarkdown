@@ -26,10 +26,10 @@ export class MarkdownEditor extends BaseComponent<{value: string, onChange?: Fun
 
 	ComponentDidMount() {
 		this.codeMirror = CM.fromTextArea(ReactDOM.findDOMNode(this.refs.codemirror), this.getOptions());
-		this.codeMirror.on("change", this.codemirrorValueChanged);
+		this.codeMirror.on("change", this.codemirrorValueChanged.bind(this));
 		this.codeMirror.on("focus", this.focusChanged.bind(this, true));
 		this.codeMirror.on("blur", this.focusChanged.bind(this, false));
-		this.codeMirror.on("cursorActivity", this.updateCursorState);
+		this.codeMirror.on("cursorActivity", this.updateCursorState.bind(this));
 		this._currentCodemirrorValue = this.props.value;
 	}
 

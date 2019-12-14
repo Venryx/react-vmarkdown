@@ -1,6 +1,6 @@
 import React from "react";
 import {BaseComponent} from "react-vextensions";
-import Icons from "./Icons";
+import * as Icons from "./Icons";
 import {ApplyFormat} from "./Formatter";
 import {Button, Row} from "react-vcomponents";
 

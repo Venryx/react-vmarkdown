@@ -1,7 +1,7 @@
 {
   "name": "react-vmarkdown",
   "description": "Markdown editor built using ReactJS.",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "main": "Dist/Main.js",
   "type": "module",
   "typings": "Dist/Main.d.ts",

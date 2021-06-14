@@ -30,16 +30,16 @@
     "react-vcomponents": "^0.0.2"
   },
   "devDependencies": {
-    "@types/react": "^16.9.16",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-vcomponents": "^1.0.4",
-    "react-vextensions": "^1.0.2",
-    "style-loader": "^1.0.1",
-    "typescript": "^3.7.3"
+    "@types/react": "^17.0.11",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-vcomponents": "^1.0.27",
+    "react-vextensions": "^1.0.5",
+    "style-loader": "^2.0.0",
+    "typescript": "^4.3.2"
   },
   "dependencies": {
-    "classnames": "^2.2.6",
+    "classnames": "^2.3.1",
     "codemirror": "^5.36.0"
   }
 }

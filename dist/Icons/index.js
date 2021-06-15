@@ -1,8 +1,8 @@
-export { default as Bold } from "./Bold";
-export { default as Italic } from "./Italic";
-export { default as Image } from "./Image";
-export { default as Link } from "./Link";
-export { default as UList } from "./UList";
-export { default as OList } from "./OList";
-export { default as Quote } from "./Quote";
+export { default as Bold } from "./Bold.js";
+export { default as Italic } from "./Italic.js";
+export { default as Image } from "./Image.js";
+export { default as Link } from "./Link.js";
+export { default as UList } from "./UList.js";
+export { default as OList } from "./OList.js";
+export { default as Quote } from "./Quote.js";
 //# sourceMappingURL=index.js.map

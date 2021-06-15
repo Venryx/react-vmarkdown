@@ -11,8 +11,8 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React from "react";
 import { BaseComponent } from "react-vextensions";
-import * as Icons from "./Icons";
-import { ApplyFormat } from "./Formatter";
+import * as Icons from "./Icons/index.js";
+import { ApplyFormat } from "./Formatter.js";
 import { Button, Row } from "react-vcomponents";
 export class MarkdownToolbar extends BaseComponent {
     render() {

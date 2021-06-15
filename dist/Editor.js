@@ -1,11 +1,11 @@
 import classNames from "classnames";
 import CM from "codemirror";
-import { GetCursorState } from "./Formatter";
+import { GetCursorState } from "./Formatter.js";
 import "codemirror/mode/xml/xml";
 import "codemirror/mode/markdown/markdown";
 import "codemirror/addon/edit/continuelist";
 import "codemirror/addon/scroll/simplescrollbars";
-import { MarkdownToolbar } from "./Toolbar";
+import { MarkdownToolbar } from "./Toolbar.js";
 import { BaseComponent } from "react-vextensions";
 import React from "react";
 import ReactDOM from "react-dom";
